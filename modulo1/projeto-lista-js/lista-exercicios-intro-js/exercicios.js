@@ -78,45 +78,51 @@ imprimeTresCoresFavoritas()
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
   // implemente sua lógica aqui
+  return string.toUpperCase()
 
 }
+retornaStringEmMaiuscula("oi")
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
-
+   return custo/valorIngresso
 }
+calculaIngressosEspetaculo(3000,100)
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
   // implemente sua lógica aqui
-
+  return string1.length == string2.length
 }
+checaStringsMesmoTamanho("ola","abc")
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
   // implemente sua lógica aqui
-
+  return array[0]
 }
+retornaPrimeiroElemento([1, 2, 3])
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
-
+  return array[array.length-1]
 }
-
+retornaUltimoElemento([1, 2, 3, 4, 5])
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
-
+  return replaceAll(array[0], array.length-1)
 }
+trocaPrimeiroEUltimo([1, 2, 3, 4, 5])
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
-
+  return string1.toLowerCase()==string2.toLowerCase()
 }
-
+checaIgualdadeDesconsiderandoCase("LARANJA", "laranja")
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
