@@ -92,3 +92,4 @@ sacolao(carrinho, frutaUm)
 sacolao(carrinho, frutaDois)
 sacolao(carrinho, frutaTres)
 console.log(carrinho) */
+
