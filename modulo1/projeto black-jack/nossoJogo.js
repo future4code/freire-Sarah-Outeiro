@@ -10,3 +10,31 @@
  * 
  * 
  */
+
+    console.log("Boas vindas ao jogo de Blackjack!")
+    if(confirm("Quer iniciar uma nova rodada?")) {
+       const cartaUsuarioUm = comprarCarta()
+       const cartaUsuarioDois = comprarCarta()
+       const cartaComputadorUm = comprarCarta()
+       const cartaComputadorDois = comprarCarta()
+       let somaCartasUsuario = cartaUsuarioUm.valor + cartaUsuarioDois.valor
+       let somaCartasComputador = cartaComputadorUm.valor + cartaComputadorDois.valor
+
+       console.log(`Usuário - Cartas: ${cartaUsuarioUm.texto} ${cartaUsuarioDois.texto} - pontuação ${somaCartasUsuario} `)
+       console.log(`Computador - Cartas: ${cartaComputadorUm.texto} ${cartaComputadorDois.texto} - pontuação ${somaCartasComputador}`)
+
+       if(somaCartasUsuario === somaCartasComputador){
+          console.log("O jogo empatou!")
+       }
+
+       if(somaCartasUsuario > somaCartasComputador){
+          console.log("Você ganhou o jogo!")
+       }
+
+       if(somaCartasUsuario < somaCartasComputador){
+          console.log("O computador ganhou o jogo!")
+       }
+       
+    } else {
+       console.log("O jogo acabou!")
+    }

@@ -65,12 +65,3 @@ console.log("O primeiro número é maior que o segundo?", maiorQueSegundo)
 console.log("O primeiro número é igual ao segundo?", igualQueSegundo)
 console.log("O primeiro número é divisível pelo segundo", divisivelSegundo)
 console.log("O segundo número é divisível pelo primeiro",divisivelPrimeiro) */
-
-let numeroPrimo = (numero) => {
-    if(numero%2 !== 0){
-        console.log("É Primo!")
-    } else {
-        console.log("Não é primo!")
-    }
-}
-numeroPrimo(12)
