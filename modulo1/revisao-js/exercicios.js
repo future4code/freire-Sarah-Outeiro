@@ -90,8 +90,13 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+     let arrayOrdenado = array.sort((a, b) => {
+        return a - b
+    })
+
+    return [arrayOrdenado[array.length-2], arrayOrdenado[1]]
 }
+
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
