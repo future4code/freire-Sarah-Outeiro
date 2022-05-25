@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
-        <p>Sarah Store</p>
+    <header class="titulo">
+        <h1><em>Sarah Store</em></h1>
     </header>
     
     <nav>
@@ -19,8 +20,9 @@
     </nav>
 
     
-    <h2>Adicionar Produto</h2>
-    <form action="">
+    <h2 class="text-center">Adicionar Produto</h2>
+    <div class="formulario-produto">    
+        <form action="">
             <label for="link-foto">Link para foto: </label>
             <input type="url" id="link-foto" name="link-foto">
             <br>
@@ -42,7 +44,15 @@
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
             <button type="submit">Adicionar</button>
 
-    </form>
+        </form>
+    </div>
+
+    <footer>
+        <p>Siga-nos nas redes sociais!</p>
+        <img src="imagens/icone insta.png" width="30"/>
+        <img src="imagens/icone facebook.png" width="30"/>
+        <img src="imagens/icone tiktok.png" width="30"/>
+    </footer>
 
 </body>
 </html>
