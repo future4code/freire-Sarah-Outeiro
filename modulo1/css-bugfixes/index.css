@@ -38,6 +38,10 @@ div img {
     background: black;
 }
 
+.centralizar-tabela{
+    margin-left: 23%;
+}
+
 .quebra-linha{
     word-wrap:normal;
     width: 190px;
