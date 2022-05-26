@@ -35,17 +35,17 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+    width: 100px;
 }
 
 .centralizar-tabela{
-    margin-left: 23%;
+    margin: 0 auto; 
 }
 
 .quebra-linha{
     word-wrap:normal;
     width: 190px;
-    margin-left: 39%; 
+    margin: 0 auto; 
 }
 
 .botao-amarelo {
@@ -67,7 +67,7 @@ div img {
 }
 
 .icone {
-    height: 15px;
+    width: 20px;
 }
 
 /** 
