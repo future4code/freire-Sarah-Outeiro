@@ -38,6 +38,12 @@ div img {
     background: black;
 }
 
+.quebra-linha{
+    word-wrap:normal;
+    width: 190px;
+    margin-left: 39%; 
+}
+
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
