@@ -30,7 +30,7 @@ img {
 }
 
 div>p:first-child {
-    display: inline;
+    display: block
 }
 
 div img {
@@ -81,7 +81,7 @@ div img {
 
 #container-para-comprar>p {
     color: #c44f00;
-    padding: 100px 0;
+    padding: 50px 0;
     font-size: 60px;
 }
 
