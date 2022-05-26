@@ -30,7 +30,8 @@ img {
 }
 
 div>p:first-child {
-    display: block
+    display: block;
+    padding: 30px;
 }
 
 div img {
@@ -59,7 +60,6 @@ div img {
     height: 15px;
 }
 
-
 /** 
   *
   *  ESTILOS HOME 
@@ -74,6 +74,7 @@ div img {
 #container-de-descricao>ol {
     padding: 15px 0px;
 }
+
 
 #container-para-comprar {
     background-color: #e7eb90;
