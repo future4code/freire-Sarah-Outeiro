@@ -1,0 +1,105 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sree+Krushnadevaraya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #f1eae0;
+    color: #354658;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+button {
+    background-color: #8abfe7;
+    color: #354658;
+    border: 0px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+    background-color: #cc889d;
+    padding: 20px 25px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilizacao do topo */
+
+.barra-topo {
+    background-color: #8abfe7;
+    padding: 15px;
+}
+
+.barra-topo h1 {
+    display: inline;
+    margin-right: 50px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-weight: 500px;
+    font-size: 25px;
+}
+
+.barra-topo p {
+    display: inline;
+    margin-right: 50px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Estilizacao Corpo */
+
+.corpo-alinhado {
+    display: flex;
+}
+
+.corpo-introducao {
+    width: 50%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo-introducao h3{
+    font-size: 20px;
+}
+
+.corpo-introducao h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #5c7997;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+
+.corpo-introducao p{
+    display: inline;
+    margin-right: 20px;
+}
+
+.corpo-foto {
+    width: 50%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo-foto img {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+}
