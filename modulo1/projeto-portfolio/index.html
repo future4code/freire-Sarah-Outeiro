@@ -10,19 +10,21 @@
 <body>
     <div class="barra-topo">
         <div class="container">
-            <h1>Portfolio</h1>
-            <p>HOME</p>
-            <p>SOBRE MIM</p>
-            <p>TRABALHOS</p>
-            <p>CONTATO</p>
+            <h1><a href="#home">Portfolio</a></h1>
+            <p><a href="#home">HOME</a></p>
+            <p><a href="#sobre-mim">SOBRE MIM</a></p>
+            <p><a href="#instituicoes">INSTITUIÇÕES DE ENSINO</a></p>
+            <p><a href="#projetos-recentes">TRABALHOS</a></p>
+            <p><a href="#habilidades">HABILIDADES</a></p>
+            <p><a href="#contato">CONTATO</a></p>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="home">
         <div class="corpo-alinhado">
             <div class="corpo-introducao">
                 <div>
-                    <h3>| FRONT-END DEVELOPER</h3>
+                    <h3><span style="color: #cc889d;">|</span> FRONT-END DEVELOPER</h3>
                     <h1>Sarah Outeiro</h1>
                     <p><button>Fale Comigo</button></p>
                     <p>Download Currículo</p>
@@ -34,6 +36,140 @@
         </div>
     </div>
 
-    
+    <div class="container">
+        <div class="divisor-secoes">
+            <div class="bola"></div>
+            <div class="bola" style="background-color: #7dae9b;"></div>
+            <div class="bola" style="background-color: #f5c59e;"></div>
+        </div>
+    </div>
+    <div class="fundo-sobre-mim" id="sobre-mim">
+        <div class="container">
+            <div class="sobre-mim">
+                <h1>Olá! Meu nome é Sarah</h1>
+                <p> Sou uma desenvolvedora FRONT-END, apaixonada por artes, design e tecnologia. Amo juntar todas minhas paixões para criar projeto únicos. Sou uma profissional versátil, procuro sempre melhorar minhas habilidades estudando cada vez mais. Utilizo várias tecnologias de desenvolvimento para criar plataformas web modernas, esteticamente agradáveis e com ótima usabilidade. Sou uma pessoa criativa, tenho conhecimentos de design e fotografia, que acabam sendo grandes aliados na hora de desenvolver projetos de FRONT-END. </p>
+                <p style="display: inline;"><button>Fale Comigo</button></p>
+                <p style="display: inline;">Download Currículo</p>
+            </div>
+        </div>
+    </div>
+    <div id="instituicoes">
+        <div class="instituicoes">
+            <h1 class="container">Instituições de Ensino</h1>
+            <div>
+                <img src="imagens/programacao.png" alt="icone programacao">
+                <img src="imagens/ensino-superior.png" alt="icone ensino superior">
+                <img src="imagens/intercambio.png" alt="icone intercambio">
+            </div>
+            <div class="instituicoes-organizacao">
+                <h2>Programação</h2>
+                <ul>
+                    <li>Labenu - JS, HTML5 e CSS3 (2022)</li>
+                    <li>Udemy - Curso Web Design Completo: HTML5, CSS3 e JS (2021)</li>
+                </ul>
+            </div>
+            <div class="instituicoes-organizacao">
+                <h2>Ensino Superior</h2>
+                <ul>
+                    <li>Arquitetura e Urbanismo (Uniderp 2011 - 2015)</li>
+                    <li>Fotografia Digital (UNIP 2016-2019)</li>
+                </ul>
+            </div>
+            <div class="instituicoes-organizacao">
+                <h2>Intercâmbios no Exterior</h2>
+                <ul>
+                    <li>EF - Education First (Oxford - UK, 2012)</li>
+                    <li>EF - Education First (New York - USA, 2013/2014)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="projetos-recentes" id="projetos-recentes">
+        <h1>Projetos Recentes</h1>
+        <div class="projetos-recentes-organizacao">
+            <div>
+                <a href="projetos/blackjack.html">
+                    <img src="imagens/blackjack.png" alt="Projeto BlackJack">
+                    <p>Projeto Black Jack</p>
+                </a>
+            </div>
+            <div>
+                <a href="projetos/lojinha.html">
+                    <img src="imagens/e-commerce.png" alt="Projeto e-commerce">
+                    <p>Projeto Site de Loja</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="habilidades">
+            <h1 class="container habilidade-titulo">Habilidades Técnicas e Comportamentais</h1>
+            <div class="habilidades">
+                <div class="habilidades-organizacao">
+                    <h2>Front-End Developer</h2>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                        <li>Terminal</li>
+                    </ul>
+                </div>
+                <div class="habilidades-organizacao">
+                    <h2>Design</h2>
+                    <ul>
+                        <li>Adobe XD</li>
+                        <li>Photoshop CC</li>
+                        <li>Adobe Lightroom Classic</li>
+                    </ul>
+                </div>
+                <div class="habilidades-organizacao">
+                    <h2>Línguas</h2>
+                    <ul>
+                        <li>Inglês Avançado</li>
+                        <li>Francês Intermediário</li>
+                        <li>Português Nativo</li>
+                    </ul>
+                </div>
+                <div class="habilidades-organizacao">
+                    <h2>Habilidades</h2>
+                    <ul>
+                        <li>Gerenciamento de e-commmerce (Loja Prisma Lab 2018-2022)</li>
+                        <li>Organização de Projetos</li>
+                        <li>Criatividade em Design e Fotografia</li>
+                        <li>Marketing Digital</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="contato">
+        <div class="container">
+            <h2>Fale Comigo</h2>
+            <div class="secoes-footer">
+                <div class="formulario">
+                    <form action="">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite aqui o seu nome"></input>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite aqui seu e-mail"></input>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea rows="10" id="mensagem" placeholder="Digite aqui sua mensagem"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="redes-sociais">
+                    <h2>Vamos Trabalhar Juntos!</h2>
+                    <p> Estou pronta para ouvir sua proposta de trabalho, se sentir mais confotável em falar comigo por outra plataforma, aqui estão algumas redes sociais onde poderemos entrar em contato.</p>
+                    <a href="https://www.linkedin.com/in/sarah-outeiro-781489230/" target="_blank"><img src="imagens/linkedin.png"></a>
+                    <a href="https://www.instagram.com/sarahouteiro/" target="_blank"><img src="imagens/instagram.png"></a>
+                    <a href="https://github.com/sarahouteiro" target="_blank"><img src="imagens/github.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i>Design e Desenvolvimento por mim </i> © <i>Sarah Outeiro</i></p>
+        </div>
+    </footer>
 </body>
 </html>
