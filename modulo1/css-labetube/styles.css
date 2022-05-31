@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+}
+
+/* estilo topo */
+.container {
+    display: flex;
+    background-color: rgb(192, 192, 249);
+    justify-content:space-between;
+    text-align: center;
+    padding: 15px;
+}
+
+.container h1 {
+    font-size: 28px;
+}
+
+input{
+    width: 200px;
+    height: 20px;
+ margin-top: 7px;
+}
+
+/* estilo grade principal */
+
+.grade-videos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    height: 500px;
+    padding: 50px;
+    text-align: center;
+}
+
+.grade-videos a {
+    border:solid 1px;
+    text-decoration: none;
+    color: black;
+}
+
+.grade-videos p {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* estilo footer */
+
+footer {
+    background-color: rgb(192, 192, 249);
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* estilo player */
+
+.area-player {
+    display: grid;
+    grid-template-rows: 2fr;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.area-player video {
+    width: 70%;
+}
+
+video {
+    width: 100%;
+}
