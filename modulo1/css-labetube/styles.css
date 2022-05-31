@@ -5,7 +5,7 @@
 /* estilo topo */
 .container {
     display: flex;
-    background-color: rgb(192, 192, 249);
+    background-color: #ff7e03;
     justify-content:space-between;
     text-align: center;
     padding: 15px;
@@ -18,7 +18,7 @@
 input{
     width: 200px;
     height: 20px;
- margin-top: 7px;
+ margin-top: 5px;
 }
 
 /* estilo grade principal */
@@ -48,7 +48,8 @@ input{
 /* estilo footer */
 
 footer {
-    background-color: rgb(192, 192, 249);
+    background-color: #3a3a42;
+    color: white;
     padding: 30px;
     position: absolute;
     bottom: 0;
