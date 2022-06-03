@@ -1,0 +1,409 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sree+Krushnadevaraya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #f1eae0;
+    color: #354658;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+a {
+    color:#354658;
+    text-decoration: none;
+}
+
+button {
+    background-color: #8abfe7;
+    color: white;
+    border: 0px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+    background-color: #cc889d;
+    padding: 20px 25px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilizacao do topo */
+
+.barra-topo {
+    background-color: #8abfe7;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 3;
+}
+
+.barra-topo h1 {
+    display: inline;
+    margin-right: 50px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-weight: 500px;
+    font-size: 25px;
+}
+
+.barra-topo p {
+    display: inline;
+    margin-right: 50px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.barra-topo a:hover {
+    color: white;
+}
+
+/* Estilizacao Corpo */
+
+.corpo-alinhado {
+    display: flex;
+    padding-top: 40px;
+}
+
+.corpo-introducao {
+    width: 50%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo-introducao h3{
+    font-size: 20px;
+}
+
+.corpo-introducao h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #5c7997;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+
+.corpo-introducao p{
+    display: inline;
+    margin-right: 20px;
+}
+
+.corpo-foto {
+    width: 50%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo-foto img {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.divisor-secoes {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.divisor-secoes .bola {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #cc889d;
+    margin: 20px;
+}
+
+/* Estilizacao Sobre Mim */
+
+.fundo-sobre-mim {
+    background-color: #cc889d;
+    padding: 100px;
+    margin-top: 100px;
+}
+
+.sobre-mim {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.sobre-mim h1 {
+    margin-bottom: 20px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    color: #f1eae0;
+}
+
+.sobre-mim p {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 900px;
+    align-items: center;
+    justify-content: center;
+    color: #f1eae0;
+}
+
+.sobre-mim button {
+    background-color:#8abfe7;
+    margin-right: 30px;
+}
+.sobre-mim button:hover {
+    background-color: #6a4853;
+}
+
+/* Estilizacao Instituicoes de Ensino */
+
+.instituicoes h1 {
+    margin-left: 120px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    color: #5c7997;
+}
+
+.instituicoes-organizacao {
+    margin-top: 20px;
+    margin-left: 130px;
+    display: inline-block;
+    padding-bottom: 200px;
+    color: #5c7997;
+}
+
+.instituicoes-organizacao h2 {
+    margin-bottom: 10px;
+}
+
+.instituicoes img {
+    width: 50px;
+    margin-left: 300px;
+    margin-top: 30px;
+    margin-right: 160px;
+}
+
+/* Estilizacao de Projetos Recentes */
+
+.projetos-recentes {
+    background-color: #7dae9b;
+}
+
+.projetos-recentes h1 {
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+
+.projetos-recentes-organizacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;    
+}
+
+.projetos-recentes img {
+    width: 350px;
+    margin: 0px 100px;
+    border-radius: 10px;
+    border:solid 2px #4b685d;
+    transition: all 0.3s ease-in-out
+}
+
+.projetos-recentes img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.projetos-recentes p {
+    margin: 10px 100px;
+    text-align: center;
+    padding-bottom: 100px;
+    font-weight: 800;
+    color: #4b685d;
+}
+
+/* Estilizacao Habilidades */
+
+.habilidade-titulo {
+    color: #5c7997;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+
+.habilidades-organizacao {
+    margin-top: 20px;
+    margin-left: 130px;
+    display: inline-block;
+    color: #5c7997;
+    padding-bottom: 100px;
+}
+
+.habilidades-organizacao h2 {
+    margin-bottom: 10px;
+}
+
+.habilidades {
+    display: flex;
+}
+
+/* estilizacao footer */
+
+footer {
+    background-color: #f5c59f;
+    color: #354658
+}
+
+footer h2 {
+    padding-top: 100px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    margin-bottom: ;
+    margin-bottom: 30px;
+}
+
+footer button {
+    background-color: #8abfe7;
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer button:hover {
+    background-color: #cc889d;
+    padding: 12px 18px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 400px;
+    height: 28px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: solid 1px #354658;
+}
+
+form textarea {
+    width: 400px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border: solid 1px #354658;
+}
+
+.secoes-footer {
+    display: flex;
+}
+
+.formulario {
+    width: 50%;
+    padding-bottom: 100px;
+}
+
+.redes-sociais {
+    width: 50%;
+    margin-left: 100px;
+}
+
+.redes-sociais p {
+    margin-bottom: 28px;
+}
+
+.redes-sociais img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #cca483;
+    color: #f8e4d4;
+    padding: 30px;
+    
+}
+
+/* estilizacao projeto */
+
+.ajuste-botao {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.ajuste-botao button {
+    padding: 10px 15px;
+}
+
+.projeto {
+    padding-bottom: 150px;
+    display: flex;
+}
+
+.projeto-imagem {
+    width: 50%;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    border: solid 2px #354658 ;
+    border-radius: 10px;
+}
+
+.projeto-infos {
+    width: 50%;
+    padding-left: 100px;
+}
+
+.projeto-infos h1 {
+    margin-bottom: 20px;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+
+.projeto-infos p {
+    margin-bottom: 50px;
+}
+
+.projeto-infos h2 {
+    margin-bottom: 10px;
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+
+.projeto-infos ul {
+    margin-left: 18px;
+}
