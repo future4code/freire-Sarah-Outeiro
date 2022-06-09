@@ -10,6 +10,7 @@ import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 const PostContainer = styled.div`
   border: 1px solid gray;
+  border-radius: 10px;
   width: 300px;
   margin-bottom: 10px;
 `
