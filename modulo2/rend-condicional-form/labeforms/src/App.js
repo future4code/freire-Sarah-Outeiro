@@ -24,19 +24,19 @@ class App extends React.Component {
   renderizaEtapa = () => {
     switch (this.state.etapa) {
       case 1:
-        return <Etapa1 />;
+        return <Etapa1 etapa={this.state.etapa} titulo="DADOS GERAIS" />;
       break;
 
       case 2:
-        return <Etapa2 />;
+        return <Etapa2 etapa={this.state.etapa} titulo="INFORMAÇÕES DO ENSINO SUPERIOR" />;
       break;
 
       case 3:
-        return <Etapa3 />;
+        return <Etapa3 etapa={this.state.etapa} titulo="INFORMAÇÕES GERAIS DE ENSINO" />;
       break;
 
       case 4:
-        return <Final />;
+        return <Final titulo="O FORMULÁRIO ACABOU" subTitulo="Muito obrigada por participar! Entraremos em contato!" />;
       break;
     
       default:

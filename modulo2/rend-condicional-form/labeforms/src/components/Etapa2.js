@@ -22,7 +22,7 @@ class Etapa2 extends React.Component{
         return(
             <div>
                 <div>
-                    <Titulo>Etapa 2 - INFORMAÇÕES DO ENSINO SUPERIOR</Titulo>
+                    <Titulo>ETAPA {this.props.etapa} - {this.props.titulo}</Titulo>
                 </div>
                 <div>
                     <Formulario>

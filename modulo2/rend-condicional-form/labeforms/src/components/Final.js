@@ -12,8 +12,8 @@ class Final extends React.Component{
     render(){
         return(
             <div>
-                <Titulo>O FORMULÁRIO ACABOU</Titulo>
-                <SubTitulo> Muito obrigada por participar! Entraremos em contato!</SubTitulo>
+                <Titulo>{this.props.titulo}</Titulo>
+                <SubTitulo>{this.props.subTitulo}</SubTitulo>
             </div>
         )
     }
