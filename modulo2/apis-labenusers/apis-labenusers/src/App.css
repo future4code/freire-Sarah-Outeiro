@@ -1,0 +1,55 @@
+button {
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #EDCA7F;
+}
+
+input {
+    height: 20px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+h2 {
+    color: #D98481;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8CB9C0;
+    height: 50px;
+    margin-top: 0;
+    color: black;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header li:last-child {
+    margin-left: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container ul {
+    padding: 0;
+}
+
+.deletar {
+    margin-left: 10px;
+    color:#D98481;
+    cursor: pointer;
+}
