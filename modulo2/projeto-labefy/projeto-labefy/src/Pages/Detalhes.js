@@ -1,6 +1,52 @@
 import axios from "axios";
 import React from "react";
+import styled from "styled-components";
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center
+`
+const Titulo = styled.h3`
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 30px;
+margin-top: 50px;
+`
+
+const Nome = styled.p`
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+`
+const Inputs = styled.div`
+margin-top: 50px;
+display: flex;
+flex-direction: column;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+`
+
+const Input = styled.input`
+height: 25px;
+width: 280px;
+border-radius: 10px;
+border: solid #204132 1px;
+text-align: center;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin: 5px;
+`
+const Button = styled.button`
+height: 30px;
+width: 280px;
+border-radius: 10px;
+border: none;
+margin: 10px;
+transition: all 0.5s ease-in-out;
+background-color: #563771;
+color: white;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+&:hover {
+    background-color: black;
+}
+cursor: pointer;
+`
 class Detalhes extends React.Component {
     state = {
         musicas: [],
@@ -71,30 +117,40 @@ class Detalhes extends React.Component {
 
     render() {
         const renderizaMusicas = this.state.musicas.map((musica) => {
-            return <p key={musica.id}>{musica.name}</p>
+            return (
+            <div>
+                <Nome key={musica.id}>{musica.name}</Nome>
+                <audio controls>
+                <source src={musica.url} type="audio/mp3"/>
+                </audio>
+            </div>
+            )
         })
 
         return(
-            <div>
-                <h3>{this.props.passarIdPlaylist.name}</h3>
+            <Container>
+                <Titulo>{this.props.passarIdPlaylist.name}</Titulo>
                 {renderizaMusicas}
-                <input 
-                placeholder='nome da música'
-                value={this.state.novaMusica}
-                onChange={this.adicionaMusica}/>
-                <input placeholder='nome do artista'
-                value={this.state.novoArtista}
-                onChange={this.adicionaArtista}/>
-                <input placeholder='link da música'
-                value={this.state.novoLink}
-                onChange={this.adicionaLink}/>
-                <button
-                    onClick={() => this.enviaMusica()}>Adicionar música na playlist</button>
-                <button 
+                <Inputs>
+                    <Input 
+                    placeholder='nome da música'
+                    value={this.state.novaMusica}
+                    onChange={this.adicionaMusica}/>
+                    <Input  placeholder='nome do artista'
+                    value={this.state.novoArtista}
+                    onChange={this.adicionaArtista}/>
+                    <Input placeholder='link da música'
+                    value={this.state.novoLink}
+                    onChange={this.adicionaLink}/>
+                </Inputs>
+                <Button
+                    onClick={() => this.enviaMusica()}>Adicionar música na playlist
+                </Button>
+                <Button 
                     onClick={() => this.props.voltarHome()}>
                     Voltar
-                </button>
-            </div>
+                </Button>
+            </Container>
         )
     }
 };

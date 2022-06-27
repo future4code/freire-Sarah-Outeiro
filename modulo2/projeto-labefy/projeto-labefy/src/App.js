@@ -1,6 +1,17 @@
 import React from "react";
 import Home from './Pages/Home'
 import Detalhes from './Pages/Detalhes'
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #9f99c4;
+  font-family: 'Mukta', sans-serif;
+}
+`
 class App extends React.Component {
   state = {
     paginaAtual: 'home',
@@ -31,9 +42,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.selectPage()}
-      </div>
+        <div>
+          <GlobalStyle/>
+          {this.selectPage()}
+        </div>
     )
   }
 };
