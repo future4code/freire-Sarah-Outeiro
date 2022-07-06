@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Carregando = styled.div`
-     height: 70vh;
+     height: 78vh;
      width: 100%;
      display: flex;
      align-items: center;

@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     margin-top: 50px;
+    @media (max-width: 500px) {
+        margin-top: 0;
+    }
 `
 
 export const BoxMatch = styled.div`
@@ -11,10 +14,15 @@ export const BoxMatch = styled.div`
     margin: 0 auto;
     border: solid 1px black;
     border-radius: 10px;
+    @media (max-width: 500px) {
+        height: 100vh;
+        width: 100%;
+    }
 `
 export const CaixaMatches = styled.div`
     height: 70vh;
     overflow-y: scroll;
+    padding-top: 15px;
 `
 export const Titulo = styled.div`
     height: 70px;
@@ -43,7 +51,7 @@ export const Voltar = styled.img`
 
 export const Logo = styled.img`
     margin-top: 25px;
-    height: 200px;
+    height: 50px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -54,8 +62,14 @@ export const Logo = styled.img`
 
 export const Perfil = styled.div`
     display: flex;
-    padding: 30px;
+    padding: 5px 20px 5px 20px;
     color: #e54356;
+    transition: all 0.5s ease-in-out;
+    background-color: #F4E1D4;
+    cursor: pointer;
+    &:hover {
+        background-color: #f5c456;
+    }
 `
 
 export const Foto = styled.div`
@@ -67,4 +81,12 @@ export const Foto = styled.div`
     background-position: top center;
     background-image: url(${props => props.img});
     margin-right: 20px;
+`
+
+export const SemMatches = styled.div`
+    height: 70vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #e54356;
 `

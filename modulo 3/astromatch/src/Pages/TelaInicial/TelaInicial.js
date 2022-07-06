@@ -11,12 +11,14 @@ import RecomecarButton from '../../Assets/Images/recomecar.png'
 
 function TelaInicial(props) {
   const [profile, setProfile] = useState();
+  const [loading, setLoading] = useState(true);
 
   const getProfile = () => {
     const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/sarah/person'
     axios.get(url)
     .then((sucess) => {
       setProfile(sucess.data.profile)
+      setLoading(false)
     })
     .catch((error) => {
       alert(error.response.data.message)
@@ -24,6 +26,7 @@ function TelaInicial(props) {
   }
 
   const postProfile = (escolha) => {
+    setLoading(true);
     const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/sarah/choose-person'
     const body = {
       "id": profile.id,
@@ -41,6 +44,7 @@ function TelaInicial(props) {
   }
 
   const resetMatches = () => {
+    setLoading(true);
     const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/sarah/clear'
 
     axios.put(url)
@@ -114,7 +118,7 @@ function TelaInicial(props) {
             <Logo onClick={onClickInicio} src={AstroLogo} alt='Logo'/>
             <People onClick={onClickIr} src={AstroPeople} alt='Seus Matches'/>
         </Titulo>
-        {loadProfile()}
+        {loading ? <Loading/> : loadProfile()}
       </BoxMatch>
     </Container>
   );

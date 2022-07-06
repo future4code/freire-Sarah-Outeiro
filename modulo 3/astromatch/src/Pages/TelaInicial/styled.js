@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     margin-top: 50px;
+    @media (max-width: 500px) {
+        margin-top: 0;
+    }
 `
 
 export const BoxMatch = styled.div`
@@ -11,6 +14,10 @@ export const BoxMatch = styled.div`
     margin: 0 auto;
     border: solid 1px black;
     border-radius: 10px;
+    @media (max-width: 500px) {
+        width: 100%;
+        height: 100vh;
+    }
 `
 
 export const Titulo = styled.div`
@@ -27,7 +34,7 @@ export const Titulo = styled.div`
 `
 export const Logo = styled.img`
     margin-top: 30px;
-    height: 200px;
+    height: 50px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -66,6 +73,10 @@ export const Foto = styled.div`
     -moz-box-shadow: 10px 10px 34px -14px rgba(71,71,71,1);
     box-shadow: 10px 10px 34px -14px rgba(71,71,71,1);
     transition: all 0.5s ease-in-out;
+    @media (max-width: 500px) {
+        width: 100%;
+        height: 71vh;
+    }
     h3 {
         padding-left: 20px;
         color: white;
