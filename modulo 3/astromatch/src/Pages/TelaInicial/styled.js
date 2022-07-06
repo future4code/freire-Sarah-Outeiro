@@ -41,6 +41,11 @@ export const People = styled.img`
     right: 20px;
     height: 30px;
     cursor: pointer;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    &:hover {
+        height: 25px;
+    }
 `
 
 export const Perfis = styled.div`
@@ -85,7 +90,35 @@ export const Footer = styled.div`
     gap: 100px;
     margin-top: 10px;
     padding-bottom: 30px;
+`
+
+export const LikeDislike = styled.img`
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        background-color: ${props => props.bgColor};
+        transform: scale(1.1);
+    }
+`
+
+export const Restart = styled.div`
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #E64155;
     img {
-        height: 50px;
+        width: 250px;
+        background-color: #E64155;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            background-color: #EA734A;
+            width: 230px;
+        }
     }
 `

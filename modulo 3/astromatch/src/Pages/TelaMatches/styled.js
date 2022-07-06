@@ -34,6 +34,11 @@ export const Voltar = styled.img`
     left: 20px;
     height: 30px;
     cursor: pointer;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    &:hover {
+        height: 25px;
+    }
 `
 
 export const Logo = styled.img`
