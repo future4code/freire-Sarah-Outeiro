@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    margin-top: 100px;
+    margin-top: 50px;
 `
 
 export const BoxMatch = styled.div`
@@ -47,6 +47,8 @@ export const Perfis = styled.div`
     padding: 20px;
 `
 export const Foto = styled.div`
+    display: flex;
+    align-items: flex-end;
     margin: 0 auto;
     width: 400px;
     height: 500px;
@@ -58,21 +60,22 @@ export const Foto = styled.div`
     -webkit-box-shadow: 10px 10px 34px -14px rgba(71,71,71,1);
     -moz-box-shadow: 10px 10px 34px -14px rgba(71,71,71,1);
     box-shadow: 10px 10px 34px -14px rgba(71,71,71,1);
+    transition: all 0.5s ease-in-out;
     h3 {
-        position: absolute;
-        top: 580px;
         padding-left: 20px;
         color: white;
         text-shadow: -1px 0px 16px #000000;
+        margin-bottom: 5px;
     }
     p {
-        position: absolute;
-        top: 610px;
-        width: 360px;
+        margin-top: 8px;
+        width: 90%;
         padding-left: 20px;
+        padding-right: 20px;
         color: white;
         text-shadow: -1px 0px 16px #000000;
         font-size: 15px;
+        padding-bottom: 10px;
     }
 `
 

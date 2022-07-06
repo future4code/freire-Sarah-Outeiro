@@ -3,10 +3,30 @@ import AstroLogo from '../../Assets/Images/logoastro.png'
 import AstroPeople from '../../Assets/Images/people.png'
 import Dislike from '../../Assets/Images/dislike.png'
 import Like from '../../Assets/Images/like.png'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import Loading from '../../components/Loading/Loading'
 
 
 function TelaInicial(props) {
-  const Itachi = 'https://i.pinimg.com/564x/33/9d/7c/339d7c777e1bdf1302faafa493a1e6e1.jpg';
+  const [profile, setProfile] = useState();
+  const [loading, setLoading] = useState(true);
+
+  const getProfile = () => {
+    const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/sarah/person'
+    axios.get(url)
+    .then((sucess) => {
+      setProfile(sucess.data.profile)
+      setLoading(false)
+    })
+    .catch((error) => {
+      alert(error.response.data.message)
+    })
+  }
+
+  useEffect(() => {
+    getProfile()
+  },[])
 
   const onClickIr = () => {
     props.clickMatches()
@@ -14,6 +34,31 @@ function TelaInicial(props) {
 
   const onClickInicio = () => {
     props.clickInicio()
+  }
+
+  const loadProfile = () => {
+    if(!loading) {
+      return(
+        <div>
+          <Perfis>
+              <Foto img={profile.photo} alt={profile.photo_alt}>
+                <div>
+                  <h3>{profile.name}, {profile.age}</h3>
+                  <p>{profile.bio}</p>
+                </div>
+              </Foto>
+          </Perfis>
+          <Footer>
+          <img src={Dislike} alt='Gostei'/>
+          <img src={Like} alt='Não Gostei'/>
+          </Footer>
+        </div>
+      )
+    } else {
+      return(
+        <Loading/>
+      )
+    }
   }
   
   return (
@@ -23,16 +68,7 @@ function TelaInicial(props) {
             <Logo onClick={onClickInicio} src={AstroLogo} alt='Logo'/>
             <People onClick={onClickIr} src={AstroPeople} alt='Seus Matches'/>
         </Titulo>
-        <Perfis>
-            <Foto img={Itachi} alt='Imagem Itachi'>
-            <h3>Itachi Uchiha, 21</h3>
-            <p>Procuro uma conexão significativa, meu filme favorito é O Corvo. Não me pergunte sobre minha família.</p>
-            </Foto>
-        </Perfis>
-        <Footer>
-            <img src={Dislike} alt='Gostei'/>
-            <img src={Like} alt='Não Gostei'/>
-        </Footer>
+        {loadProfile()}
       </BoxMatch>
     </Container>
   );
