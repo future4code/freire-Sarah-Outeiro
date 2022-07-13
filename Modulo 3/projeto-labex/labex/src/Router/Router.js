@@ -18,7 +18,7 @@ function Router() {
                 <Route path='login' element={<LoginPage/>}/>
                 <Route path='admin/home' element={<AdminHomePage/>}/>
                 <Route path='inscricao' element={<ApplicationFormPage/>}/>
-                <Route path='detalhes' element={<TripDetailsPage/>}/>
+                <Route path='detalhes/:id' element={<TripDetailsPage/>}/>
                 <Route path='*' element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>
