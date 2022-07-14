@@ -1,5 +1,5 @@
 import { ButtonPrimario, Select, Input } from "../../styles";
-import { Titulo } from './styled';
+import { Titulo, AreaForm, Botoes } from './styled';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from "axios";
@@ -84,6 +84,7 @@ function ApplicationFormPage() {
   return (
     <div>
       <Titulo> Inscreva-se para uma viagem </Titulo>
+      <AreaForm>
       <form onSubmit={postApplication}>
         <Select value={viagem} onChange={onChangeViagem} required>
           <option value=''>Escolha Uma Viagem</option>
@@ -97,9 +98,12 @@ function ApplicationFormPage() {
           <option value=''>Escolha um País</option>
           <option value='Brasil'>Brasil</option>
         </Select>
-        <ButtonPrimario type="submit">Enviar</ButtonPrimario>
+        <Botoes>
+          <ButtonPrimario type="submit">Enviar</ButtonPrimario>
+          <ButtonPrimario onClick={goBack}>Voltar</ButtonPrimario>
+        </Botoes>
       </form>
-      <ButtonPrimario onClick={goBack}>Voltar</ButtonPrimario>
+      </AreaForm>
     </div>
   );
 }

@@ -67,4 +67,7 @@ export const Input = styled.input`
     background-color: #EFD9D8;
     padding: 10px;
     color: #32576B;
+    @media (min-width: 900px) {
+        width: 96%;
+    }
 `

@@ -52,7 +52,7 @@ function TripDetailsPage() {
 
   const listaDeAprovados = viagem.approved.map((aprovado) => {
     return(
-      <li key={aprovado.key}>{aprovado.name}</li>
+      <p key={aprovado.key}>{aprovado.name}</p>
     )
   })
 

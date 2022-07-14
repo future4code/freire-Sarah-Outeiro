@@ -1,4 +1,4 @@
-import { Titulo, Botoes } from './styled';
+import { Titulo, Botoes, AreaForm } from './styled';
 import { ButtonPrimario, Select, Input} from '../../styles';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -80,26 +80,26 @@ function CreateTripPage() {
   return (
     <div>  
         <Titulo> Inscreva-se para uma viagem </Titulo>
-
-        <form onSubmit={criarViagem}>
-          <Input value={nome} onChange={onChangeNome} placeholder="Nome" required/>
-          <Select value={planeta} onChange={onChangePlaneta} required>
-            <option value=''>Escolha um Planeta</option>
-            <option value='mercurio'>Mercúrio</option>
-            <option value='venus'>Vênus</option>
-            <option value='terra'>Terra</option>
-            <option value='marte'>Marte</option>
-            <option value='jupiter'>Júpiter</option>
-          </Select>
-          <Input type='date' value={data} onChange={onChangeData} required/>
-          <Input value={descricao} onChange={onChangeDescricao} placeholder="Descrição" required/>
-          <Input value={duracaoDias} onChange={onChangeDuracaoDias} placeholder="Duração em Dias" required/>
-          <ButtonPrimario type='submit'>Criar</ButtonPrimario>
-        </form>
-
-        <Botoes>
-          <ButtonPrimario onClick={goBack}>Voltar</ButtonPrimario>
-        </Botoes>
+        <AreaForm>
+          <form onSubmit={criarViagem}>
+            <Input value={nome} onChange={onChangeNome} placeholder="Nome" required/>
+            <Select value={planeta} onChange={onChangePlaneta} required>
+              <option value=''>Escolha um Planeta</option>
+              <option value='mercurio'>Mercúrio</option>
+              <option value='venus'>Vênus</option>
+              <option value='terra'>Terra</option>
+              <option value='marte'>Marte</option>
+              <option value='jupiter'>Júpiter</option>
+            </Select>
+            <Input type='date' value={data} onChange={onChangeData} required/>
+            <Input value={descricao} onChange={onChangeDescricao} placeholder="Descrição" required/>
+            <Input value={duracaoDias} onChange={onChangeDuracaoDias} placeholder="Duração em Dias" required/>
+            <Botoes>
+              <ButtonPrimario type='submit'>Criar</ButtonPrimario>
+              <ButtonPrimario onClick={goBack}>Voltar</ButtonPrimario>
+            </Botoes>
+          </form>
+        </AreaForm>
     </div>
   );
 }

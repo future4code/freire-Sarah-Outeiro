@@ -1,5 +1,5 @@
-import banner from '../../Assets/banner.png';
-import { Banner } from './styled';
+import banner from '../../Assets/banner.jpg';
+import { Banner, Botoes } from './styled';
 import { ButtonPrimario } from '../../styles';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,8 +17,10 @@ function HomePage() {
     return (
       <div>  
         <Banner src={banner} alt='Foto de um Mundo' />
-        <ButtonPrimario onClick={goToTripsPage}>Ver Viagens</ButtonPrimario>
-        <ButtonPrimario onClick={goToLoginPage}>Área Admin</ButtonPrimario>
+        <Botoes>
+          <ButtonPrimario onClick={goToTripsPage}>Ver Viagens</ButtonPrimario>
+          <ButtonPrimario onClick={goToLoginPage}>Área Admin</ButtonPrimario>
+        </Botoes>
       </div>
     );
   }

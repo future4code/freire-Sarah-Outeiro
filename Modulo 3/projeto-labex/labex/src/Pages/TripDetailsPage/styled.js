@@ -14,8 +14,7 @@ export const Infos = styled.p`
 `
 
 export const Lista = styled.div`
-    text-align: start;
-    padding-left: 38%;
+    text-align: center;
     margin-bottom: 40px;
     color: #EEC1C1;
 `

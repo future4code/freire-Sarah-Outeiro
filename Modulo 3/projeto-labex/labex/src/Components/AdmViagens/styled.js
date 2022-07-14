@@ -8,8 +8,12 @@ export const Box = styled.div`
     justify-content: space-between;
     border-radius: 7px;
     margin-bottom: 30px;
+    p {
+        cursor: pointer;
+    }
 `
 
 export const Remove = styled.img`
     height: 30px;
+    cursor: pointer;
 `

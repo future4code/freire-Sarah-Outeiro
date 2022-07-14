@@ -1,18 +1,10 @@
-import { Viagem } from './styled'
-import { ButtonPrimario } from '../../styles'
-import { useNavigate } from 'react-router-dom';
+import { Viagem, Lista } from './styled'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { getTripsUrl } from '../../Constants';
 
 function BoxViagem() {
     const [ trips, setTrips ] = useState([])
-
-    const navigate = useNavigate()
-
-    const goToApplicationFormPage = () => {
-        navigate('/inscricao')
-    }
 
     const getTrips = () => {
         axios.get(getTripsUrl)
@@ -42,8 +34,9 @@ function BoxViagem() {
 
     return (
         <div>
-            {listaViagem}
-            <ButtonPrimario onClick={goToApplicationFormPage}>Inscrever-se</ButtonPrimario>
+            <Lista>
+                {listaViagem}
+            </Lista>
         </div>
     );
   }

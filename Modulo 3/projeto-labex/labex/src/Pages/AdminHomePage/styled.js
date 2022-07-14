@@ -8,5 +8,8 @@ export const Titulo = styled.h2`
 `
 export const Botoes = styled.div`
     margin-top: 30px;
+    @media (min-width: 900px) {
+        display: flex;   
+        column-gap: 30px;
+    }
 `
-

@@ -11,4 +11,18 @@ export const Viagem = styled.div`
     p {
         margin: 15px 0px 15px 0px;
     }
+    @media (min-width: 900px) {
+        margin-bottom: 0;
+    }
+`
+
+export const Lista = styled.div`
+    @media (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 25px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
 `

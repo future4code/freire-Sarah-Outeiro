@@ -1,4 +1,4 @@
-import { Ficha } from './styled';
+import { Ficha, Candidatos } from './styled';
 import { ButtonPrimario } from '../../styles';
 import axios from 'axios';
 
@@ -39,9 +39,9 @@ function FichaCandidato(props) {
   })
 
   return (
-    <div>
+    <Candidatos>
       {props.candidatos.length > 0 ? listaCandidatos : <p>Nenhum candidato para analisar</p>}
-    </div>
+    </Candidatos>
   );
 }
   

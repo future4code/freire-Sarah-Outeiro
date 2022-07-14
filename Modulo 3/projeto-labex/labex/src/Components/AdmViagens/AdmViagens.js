@@ -1,5 +1,4 @@
 import { Box, Remove } from './styled';
-import { ButtonPrimario } from '../../styles';
 import Trash from '../../Assets/trash-icon.png'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -11,10 +10,6 @@ function AdmViagens() {
   const [ viagens, setViagens ] = useState([]);
 
   const navigate = useNavigate();
-
-  const goToCreateTrip = () => {
-    navigate('/criar-viagem')
-  }
 
   const goToDetailsPage = (id) => {
       navigate(`/detalhes/${id}`)
@@ -60,7 +55,6 @@ function AdmViagens() {
           </Box>
         )
       })}
-      <ButtonPrimario onClick={goToCreateTrip}>Criar Viagem</ButtonPrimario>
     </div>
   );
 }
