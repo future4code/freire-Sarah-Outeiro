@@ -1,0 +1,11 @@
+export const primaryColor = '#887ED8';
+
+export const secondColor = '#F2825F';
+
+export const darkerSecondColor = '#6BE48A';
+
+export const thirdColor = '#E9E561';
+
+export const neutralColor = '#F5F5F5';
+
+export const darkerNeutralColor = '#786C5E';
