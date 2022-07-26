@@ -9,3 +9,5 @@ export const thirdColor = '#E9E561';
 export const neutralColor = '#F5F5F5';
 
 export const darkerNeutralColor = '#786C5E';
+
+export const lightOrange = '#fcc4b3';

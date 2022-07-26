@@ -4,7 +4,8 @@ import {
     secondColor, 
     darkerSecondColor, 
     thirdColor, 
-    darkerNeutralColor
+    darkerNeutralColor,
+    lightOrange
 } from './colors';
 
 const theme = createTheme({
@@ -18,6 +19,18 @@ const theme = createTheme({
     secondary: {
       light: secondColor,
       main: darkerNeutralColor,
+      dark: darkerSecondColor,
+      contrastText: '#E9E561',
+    },
+    third: {
+      light: thirdColor,
+      main: thirdColor,
+      dark: darkerSecondColor,
+      contrastText: '#E9E561',
+    },
+    fourth: {
+      light: lightOrange,
+      main: lightOrange,
       dark: darkerSecondColor,
       contrastText: '#E9E561',
     },

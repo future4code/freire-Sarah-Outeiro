@@ -27,4 +27,8 @@ export const Botao = styled.div`
     border-top: solid 1px #887ED8;
     padding: 20px 10px 0px 10px;
     margin: 30px;
+    position: fixed;
+    width: 78%;
+    bottom: 10;
+    left: 0;
 `
