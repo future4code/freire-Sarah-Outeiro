@@ -18,7 +18,6 @@ const Comments = () => {
               id="Post" 
               multiline
               rows={5}
-              maxRows={10}
             />
           </Box>
           <Grid 

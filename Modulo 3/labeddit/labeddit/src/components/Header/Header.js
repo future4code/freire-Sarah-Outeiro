@@ -9,6 +9,12 @@ import Logo from '../../assets/images/logo.png';
 
 const Header = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem('token')
+
+  const logout = () => {
+    localStorage.removeItem('token')
+    goToLoginPage(navigate)
+  }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -18,7 +24,7 @@ const Header = () => {
             <Img src={Logo}/>
             LabEddit
           </Button>
-          <Button onClick={() => goToLoginPage(navigate)} color="inherit">Logout</Button>
+          <Button onClick={logout} color="inherit">Logout</Button>
         </StyledToolBar>
       </AppBar>
     </Box>

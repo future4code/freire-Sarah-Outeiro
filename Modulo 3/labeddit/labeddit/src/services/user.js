@@ -10,7 +10,7 @@ export const login = (body, clear, navigate) => {
         goToPostListPage(navigate)
     })
     .catch((error) => {
-        alert('Erro no login')
+        alert(error.response.data.message)
     })
   }
 
@@ -22,6 +22,6 @@ export const login = (body, clear, navigate) => {
         goToPostListPage(navigate)
     })
     .catch((error) => {
-        alert('Erro no login')
+        alert(error.response.data.message)
     })
   }

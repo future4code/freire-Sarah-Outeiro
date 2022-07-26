@@ -3,7 +3,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox'
 import { useNavigate } from 'react-router-dom';
-import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 import useForm from '../../hooks/useForm';
 import { signUp } from '../../services/user';
 import { useState } from 'react';
@@ -16,7 +15,6 @@ const SignUpForm = () => {
         setTerms(!terms)
     }
 
-    useUnprotectedPage()
     const navigate = useNavigate();
 
     const onSubmitForm = (event) => {
