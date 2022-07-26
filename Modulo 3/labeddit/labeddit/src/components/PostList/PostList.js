@@ -9,7 +9,7 @@ const PostList = () => {
     const navigate = useNavigate();
 
     return(
-        <div>
+        <>
             <Posts>
                 <EnviadoPor>Enviado por: labeluno38</EnviadoPor>
                 <Texto onClick={() => goToPostDetailPage(navigate)}>Por que a maioria dos desenvolvedores usam linux? ou as empresas de tecnologia usam linux?</Texto>
@@ -25,7 +25,7 @@ const PostList = () => {
                     </DivComentarios>
                 </DivBottom>
             </Posts>
-        </div>
+        </>
     )
 }
 

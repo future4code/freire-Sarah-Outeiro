@@ -5,7 +5,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 const CommentsList = () => {
 
     return(
-        <div>
+        <>
             <Posts>
                 <EnviadoPor>Enviado por: labeluno78</EnviadoPor>
                 <Texto>Não posso falar por todos, mas usar Linux ajudou o meu pc a ter uma performance melhor (e evitou que eu precisasse comprar um novo) </Texto>
@@ -17,7 +17,7 @@ const CommentsList = () => {
                     </DivEngajamento>
                 </DivBottom>
             </Posts>
-        </div>
+        </>
     )
 }
 

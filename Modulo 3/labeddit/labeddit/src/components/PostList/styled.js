@@ -21,6 +21,7 @@ export const Texto = styled.p`
     font-size: 18px;
     padding: 10px;
     color: black;
+    cursor: pointer;
 `
 
 export const DivBottom = styled.div`
@@ -56,6 +57,7 @@ export const DivComentarios = styled.div`
     width: 40px;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
     p {
         font-size: 12px;
         color: #786C5E;

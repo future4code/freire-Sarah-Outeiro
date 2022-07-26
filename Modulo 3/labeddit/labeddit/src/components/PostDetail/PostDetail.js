@@ -6,7 +6,7 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 const PostDetail = () => {
 
     return(
-        <div>
+        <>
             <Posts>
                 <EnviadoPor>Enviado por: labeluno38</EnviadoPor>
                 <Texto>Por que a maioria dos desenvolvedores usam linux? ou as empresas de tecnologia usam linux?</Texto>
@@ -22,7 +22,7 @@ const PostDetail = () => {
                     </DivComentarios>
                 </DivBottom>
             </Posts>
-        </div>
+        </>
     )
 }
 

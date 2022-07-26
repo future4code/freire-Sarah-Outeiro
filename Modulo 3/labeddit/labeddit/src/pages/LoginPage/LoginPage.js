@@ -6,72 +6,73 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import { useNavigate } from 'react-router-dom';
 import { goToPostListPage, goToSignUpPage } from '../../routes/coordinator';
+import Container from '@mui/material/Container';
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
     return (
-      <div>
-        <Titulo>
-          <LogoLogin src={Logo} alt='Logo do LabEddit'/>
-          <h1>LabEddit</h1>
-          <p>O projeto de rede social da Labenu</p>
-          <Grid
-            container spacing={1}
-            pl={5}
-            pr={5}
-            pt={5}
-            pb={2}
-            >
-            <Grid item xs={12}>
-              <TextField
-                id="outlined-name"
-                label="Nome"
-                fullWidth
-                color="primary"
-              />
+        <Container maxWidth='xs'>
+          <Titulo>
+            <LogoLogin src={Logo} alt='Logo do LabEddit'/>
+            <h1>LabEddit</h1>
+            <p>O projeto de rede social da Labenu</p>
+            <Grid
+              container spacing={1}
+              pl={5}
+              pr={5}
+              pt={5}
+              pb={2}
+              >
+              <Grid item xs={12}>
+                <TextField
+                  id="outlined-name"
+                  label="Nome"
+                  fullWidth
+                  color="primary"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  id="outlined-name"
+                  label="Senha"
+                  type='password'
+                  fullWidth
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="outlined-name"
-                label="Senha"
-                type='password'
+            <Grid 
+              container spacing={0}
+              pl={5}
+              pr={5}
+              pb={1}
+            >
+              <Button 
+                variant="contained" 
+                endIcon={<SendIcon />}
                 fullWidth
-              />
+                size="large"
+                onClick={() => goToPostListPage(navigate)}
+              >
+                Continuar
+              </Button>
             </Grid>
-          </Grid>
-          <Grid 
-            container spacing={0}
-            pl={5}
-            pr={5}
-            pb={1}
-          >
-            <Button 
-              variant="contained" 
-              endIcon={<SendIcon />}
-              fullWidth
-              size="large"
-              onClick={() => goToPostListPage(navigate)}
+          </Titulo>
+          <Botao>
+            <Grid
+              container spacing={0}
             >
-              Continuar
-            </Button>
-          </Grid>
-        </Titulo>
-        <Botao>
-          <Grid
-            container spacing={0}
-          >
-            <Button 
-              variant="outlined"
-              fullWidth
-              size="large"
-              onClick={() => goToSignUpPage(navigate)}
-            >
-              Crie uma conta!
-            </Button>
-          </Grid>
-        </Botao>
-      </div>
+              <Button 
+                variant="outlined"
+                fullWidth
+                size="large"
+                onClick={() => goToSignUpPage(navigate)}
+              >
+                Crie uma conta!
+              </Button>
+            </Grid>
+          </Botao>
+        </Container>
     );
   };
   

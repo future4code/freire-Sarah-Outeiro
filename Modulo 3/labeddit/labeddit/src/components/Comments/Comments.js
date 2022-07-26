@@ -9,7 +9,6 @@ const Comments = () => {
         <PostField>
           <Box
             sx={{
-              width: 500,
               maxWidth: '100%'
             }}
           >
