@@ -12,12 +12,12 @@ const PostDetail = () => {
                 <Texto>Por que a maioria dos desenvolvedores usam linux? ou as empresas de tecnologia usam linux?</Texto>
                 <DivBottom>
                     <DivEngajamento>
-                    <ArrowUpwardIcon color={'fourth'} fontSize={'small'}/>
+                    <ArrowUpwardIcon color={'fifth'} fontSize={'small'}/>
                     <p>1.2k</p> 
-                    <ArrowDownwardIcon color={'fourth'} fontSize={'small'}/>
+                    <ArrowDownwardIcon color={'fifth'} fontSize={'small'}/>
                     </DivEngajamento>
                     <DivComentarios>
-                        <ChatBubbleOutlineIcon color={'fourth'} fontSize={'small'} />
+                        <ChatBubbleOutlineIcon color={'fifth'} fontSize={'small'} />
                         <p>54</p>
                     </DivComentarios>
                 </DivBottom>

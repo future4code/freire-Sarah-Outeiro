@@ -4,14 +4,14 @@ export const Posts = styled.div`
     margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color:#F2825F;
+    background-color: #E9E561;
     height: auto;  
     border-radius: 5px;
     padding-bottom: 5px;
 `
 
 export const EnviadoPor = styled.p`
-    color: #fcc4b3;
+    color: #786C5E;
     font-size: 14px;
     padding-top: 10px;
     margin-left: 10px;
@@ -20,7 +20,7 @@ export const EnviadoPor = styled.p`
 export const Texto = styled.p`
     font-size: 18px;
     padding: 10px;
-    color: white;
+    color: black;
 `
 
 export const DivBottom = styled.div`
@@ -29,7 +29,7 @@ export const DivBottom = styled.div`
 
 export const DivEngajamento = styled.div`
     display: flex;
-    border: solid 1px #fcc4b3;
+    border: solid 1px #786C5E;
     border-radius: 20px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -40,13 +40,13 @@ export const DivEngajamento = styled.div`
     align-items: center;
     p {
         font-size: 12px;
-        color: #fcc4b3;
+        color: #786C5E;
     }
 `
 
 export const DivComentarios = styled.div`
     display: flex;
-    border: solid 1px #fcc4b3;
+    border: solid 1px #786C5E;
     border-radius: 20px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -58,6 +58,6 @@ export const DivComentarios = styled.div`
     align-items: center;
     p {
         font-size: 12px;
-        color: #fcc4b3;
+        color: #786C5E;
     }
 `

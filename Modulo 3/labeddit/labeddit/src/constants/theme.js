@@ -34,6 +34,12 @@ const theme = createTheme({
       dark: darkerSecondColor,
       contrastText: '#E9E561',
     },
+    fifth: {
+      light: darkerNeutralColor,
+      main: darkerNeutralColor,
+      dark: darkerSecondColor,
+      contrastText: '#E9E561',
+    },
   },
   components: {
     MuiFormControlLabel: {
