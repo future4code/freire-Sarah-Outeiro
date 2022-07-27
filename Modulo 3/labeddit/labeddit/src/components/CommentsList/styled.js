@@ -43,3 +43,9 @@ export const DivEngajamento = styled.div`
         color: #fcc4b3;
     }
 `
+
+export const Carregando = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+`

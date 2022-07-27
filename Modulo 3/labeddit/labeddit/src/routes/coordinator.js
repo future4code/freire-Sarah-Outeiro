@@ -10,6 +10,6 @@ export const goToPostListPage= (navigate) => {
     navigate('/postlist')
 };
 
-export const goToPostDetailPage= (navigate) => {
-    navigate('/postdetail/:id')
+export const goToPostDetailPage= (navigate, id, post) => {
+    navigate(`/postdetail/${id}`, { state: post })
 };

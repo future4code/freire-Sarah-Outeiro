@@ -63,3 +63,9 @@ export const DivComentarios = styled.div`
         color: #786C5E;
     }
 `
+
+export const Carregando = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+`

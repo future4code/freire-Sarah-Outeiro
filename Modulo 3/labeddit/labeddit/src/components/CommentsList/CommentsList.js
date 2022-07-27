@@ -1,22 +1,36 @@
-import { Posts, EnviadoPor, Texto, DivEngajamento, DivBottom } from './styled';
+import { Posts, EnviadoPor, Texto, DivEngajamento, DivBottom, Carregando } from './styled';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import CircularProgress from '@mui/material/CircularProgress';
 
-const CommentsList = () => {
 
-    return(
-        <>
-            <Posts>
-                <EnviadoPor>Enviado por: labeluno78</EnviadoPor>
-                <Texto>Não posso falar por todos, mas usar Linux ajudou o meu pc a ter uma performance melhor (e evitou que eu precisasse comprar um novo) </Texto>
+const CommentsList = (props) => {
+
+    const commentCards = props.listaComentario.map((comment) => {
+        return(
+            <Posts key={comment.id}>
+                <EnviadoPor>Enviado por: {comment.username}</EnviadoPor>
+                <Texto>{comment.body}</Texto>
                 <DivBottom>
                     <DivEngajamento>
                     <ArrowUpwardIcon color={'fourth'} fontSize={'small'}/>
-                    <p>1.2k</p> 
+                    <p>{comment.voteSum === null ? '0' : comment.voteSum}</p> 
                     <ArrowDownwardIcon color={'fourth'} fontSize={'small'}/>
                     </DivEngajamento>
                 </DivBottom>
             </Posts>
+        )
+    })
+
+    return(
+        <>
+            {
+                commentCards.length > 0 ? 
+                    commentCards : 
+                    <Carregando>
+                        <CircularProgress color={'primary'}/>
+                    </Carregando>
+            }
         </>
     )
 }
