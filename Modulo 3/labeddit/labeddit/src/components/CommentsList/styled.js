@@ -48,4 +48,7 @@ export const Carregando = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    p {
+        color: #887ED8;
+    }
 `

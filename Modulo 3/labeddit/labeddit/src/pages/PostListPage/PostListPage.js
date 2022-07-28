@@ -42,7 +42,7 @@ const PostListPage = () => {
         <Header/>
         <Container maxWidth='md'>
           <PostArea newPost={updatePostList}/>
-          <PostList posts={postList}/>
+          <PostList posts={postList} sendVote={updatePostList}/>
         </Container>
       </>
     );

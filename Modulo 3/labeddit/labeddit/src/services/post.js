@@ -20,3 +20,5 @@ export const sendPost = (body, clear, navigate) => {
         alert(error.response.data.message)
     })
   }
+
+  

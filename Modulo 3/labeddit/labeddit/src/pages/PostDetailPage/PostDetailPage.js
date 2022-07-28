@@ -46,7 +46,7 @@ const PostDetailPage = () => {
         <Container maxWidth='md'>
           <PostDetail/>
           <Comments enviaComentario={atualizaListaComentarios}/>
-          <CommentsList listaComentario={comments}/>
+          <CommentsList listaComentario={comments} sendVote={atualizaListaComentarios}/>
         </Container>
       </>
     );
