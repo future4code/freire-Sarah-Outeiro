@@ -3,14 +3,14 @@ import { goToSignUp } from '../../routes/coordinator'
 import { useNavigate } from "react-router-dom"
 import useUnprotectedPage from '../../hooks/useUnprotectedPage'
 
-const LoginPage = () => {
+const LoginPage = ({setRightButtonText}) => {
   useUnprotectedPage()
   
   const navigate = useNavigate()
 
     return (
       <>
-        <LoginForm/>
+        <LoginForm setRightButtonText={setRightButtonText}/>
         <button onClick={() => goToSignUp(navigate)}> Não possui conta? Cadastre-se!</button>
       </>
     );

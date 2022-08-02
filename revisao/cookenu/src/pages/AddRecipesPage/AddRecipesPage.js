@@ -1,10 +1,11 @@
 import useProtectedPage from "../../hooks/useProtectedPage"
+import AddRecipesForm from './AddRecipesForm'
 
 const AddRecipesPage = () => {
   useProtectedPage()
     return (
       <>
-        AddRecipesPage
+        <AddRecipesForm/>
       </>
     );
   }

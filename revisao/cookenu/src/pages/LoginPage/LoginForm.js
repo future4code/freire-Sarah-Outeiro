@@ -1,16 +1,17 @@
 import useForm from "../../hooks/useForm"
 import { login } from "../../services/user"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
-const LoginForm = () => {
+const LoginForm = ({setRightButtonText}) => {
     const [form, onChange, clear] = useForm({email: '', password: ''})
-
     const navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(false)
 
     const onSubmitForm = (event) => {
       console.log(form)
       event.preventDefault()
-      login(form, clear, navigate)
+      login(form, clear, navigate, setRightButtonText, setIsLoading)
     }
     
     return(
@@ -32,7 +33,7 @@ const LoginForm = () => {
             type={'password'}
           />
             
-          <button type={'submit'}>Login</button>
+          <button type={'submit'}>{isLoading ? <>carregando</> : <>Fazer Login!</>}</button>
         </form>
     )
 }
