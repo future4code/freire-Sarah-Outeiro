@@ -11,8 +11,8 @@ const LoginFormPage = () => {
                         placeholder='email@email.com'
                         required
                     />
-                    </DivInput>
-                    <DivInput>
+                </DivInput>
+                <DivInput>
                     <Label htmlFor='senha'>Senha*</Label>
                     <Input
                         id='senha'
