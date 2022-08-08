@@ -21,6 +21,21 @@ export const Lista = styled.div`
 export const Pagamento = styled.div`
     height: auto;
     margin-bottom: 5px;
+    input {
+        -webkit-appearance: none;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid black;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        transition: all 0.2s ease-in-out;
+        &:checked {
+            background-color: black;
+            outline: 2px solid white;
+            outline-offset: -3px;
+        }
+    }
 `
 
 export const Button = styled.button`

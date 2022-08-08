@@ -6,11 +6,11 @@ const FormaPagamento = () => {
             <p>Forma de Pagamento</p>
             <Lista>
                 <Pagamento>
-                    <input type='checkbox' id='dinheiro' name='dinheiro' value='Dinheiro'/>
+                    <input type='radio' id='dinheiro' name='pagamento' value='Dinheiro' checked/>
                     <label htmlFor='dinheiro'> Dinheiro </label>
                 </Pagamento>
                 <Pagamento>
-                    <input type='checkbox' id='credito' name='credito' value='Credito'/>
+                    <input type='radio' id='credito' name='pagamento' value='credito'/>
                     <label htmlFor='credito'> Cartão de crédito </label>
                 </Pagamento>
             </Lista>
