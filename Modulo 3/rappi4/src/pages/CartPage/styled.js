@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const CartContainer = styled.div`
     border-top: 1px solid #d0d0d0;
     margin-bottom: 0;
-    height: 600px;
+    height: 500px;
     padding-top: 50px;
     padding-bottom: 60px;
     overflow-y: scroll;
