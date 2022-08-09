@@ -1,7 +1,14 @@
+import HeaderRestaurante from "../../components/HeaderRestaurante/HeaderRestaurante"
+import RestaurantTitle from "../../components/RestaurantTitle/RestaurantTitle"
+import { RestaurantBody } from './styled'
+
 const RestaurantPage = () => {
     return (
       <>
-        RestaurantPage
+        <HeaderRestaurante/>
+        <RestaurantBody>
+          <RestaurantTitle/>
+        </RestaurantBody>
       </>
     );
   }

@@ -1,11 +1,11 @@
 import { GlobalStyle } from './styled'
-import OrderGoingPage from './pages/OrderGoingPage/OrderGoingPage'
+import RestaurantPage from './pages/RestaurantPage/RestaurantPage'
 
 const App = () => {
   return (
     <>
       <GlobalStyle/>
-      <OrderGoingPage/>
+      <RestaurantPage/>
     </>
   );
 }
