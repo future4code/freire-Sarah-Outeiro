@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node ./build/index.js"
+    "execicio1": "clear && tsc && node ./build/exercicio1.js",
+    "execicio2": "clear && tsc && node ./build/exercicio2.js",
+    "execicio3": "clear && tsc && node ./build/exercicio3.js",
+    "execicio4": "clear && tsc && node ./build/exercicio4.js",
+    "execicio5": "clear && tsc && node ./build/exercicio5.js",
+    "execicio6": "clear && tsc && node ./build/exercicio6.js",
+    "execicio7": "clear && tsc && node ./build/exercicio7.js",
+    "execicio8": "clear && tsc && node ./build/exercicio8.js"
   },
   "keywords": [],
   "author": "",
