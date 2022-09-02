@@ -19,9 +19,9 @@ export default async function createProduct(req: Request, res: Response) {
 
         const answer = await insertProduct(productInsert)
 
-        res.status(201).send({ answer })
+        res.status(201).send({ message: answer })
 
     } catch (error: any) {
-        res.status(500).send({message: "Algo errado aconteceu"})
+        res.status(500).send({ message: "Algo errado aconteceu" })
     }
 }

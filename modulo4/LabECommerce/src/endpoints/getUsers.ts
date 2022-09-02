@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import selectUsers from "../data/selectUsers";
+import { Request, Response } from "express"
+import selectUsers from "../data/selectUsers"
 
 export default async function getUsers(req: Request, res: Response) {
     try {

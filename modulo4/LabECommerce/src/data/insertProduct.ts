@@ -10,7 +10,7 @@ export default async function insertProduct(insertProduct: ProductData): Promise
         id,
         name,
         price,
-        image_url
+        image_url                                     
     })
 
     return `produto ${name} adicionado com sucesso!`

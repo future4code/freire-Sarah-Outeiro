@@ -13,13 +13,21 @@ export type UserData = {
 
 export type ProductInput = {
     name: string,
-    price: string,
+    price: number,
     image_url: string
 }
 
 export type ProductData = {
     id: string,
     name: string,
-    price: string,
+    price: number,
     image_url: string
+}
+
+export type PurchaseData = {
+    id: string,
+    userId: string,
+    productId: string,
+    quantity: number,
+    totalPrice: number
 }
