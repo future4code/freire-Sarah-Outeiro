@@ -1,12 +1,18 @@
 import { AddressInfo } from "net"
 import express, {Express} from 'express'
 import cors from 'cors'
-import knex from "knex"
+import createUser from "./endpoints/createUser"
+import getUsers from "./endpoints/getUsers"
+import createProduct from "./endpoints/createProduct"
 
 const app: Express = express()
 
 app.use(express.json())
 app.use(cors())
+
+app.post('/user', createUser)
+app.get('/users', getUsers)
+app.post('/product', createProduct)
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
