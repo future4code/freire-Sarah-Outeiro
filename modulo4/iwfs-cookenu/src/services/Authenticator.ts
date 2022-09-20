@@ -18,12 +18,9 @@ class Authenticator {
 
     getTokenData(token: string) {
 
-        const payload = jwt.verify(
-            token,
-            process.env.JWT_KEY as string
-        )
+        const payload = jwt.verify(token,process.env.JWT_KEY as string) as any
 
-        return payload
+        return payload.id
     }
 }
 
