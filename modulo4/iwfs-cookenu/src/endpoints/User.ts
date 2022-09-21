@@ -5,6 +5,7 @@ import IdGenerator from '../services/IdGenerator'
 import User from '../model/User'
 import HashManager from '../services/HashManager'
 import Authenticator from '../services/Authenticator'
+import { TokenNotPass } from '../error/TokenNotPass'
 class UserEndpoint {
 
     async create(req: Request, res: Response) {
@@ -80,7 +81,7 @@ class UserEndpoint {
             const token = req.headers.authorization
 
             if (!token) {
-                throw new Error('O token deve ser passado')
+                throw new TokenNotPass
             }
 
             const id = new Authenticator().getTokenData(token)
@@ -102,7 +103,7 @@ class UserEndpoint {
             const idAnotherPerson = req.params.id
 
             if (!token) {
-                throw new Error('O token deve ser passado')
+                throw new TokenNotPass()
             }
 
             new Authenticator().getTokenData(token)
