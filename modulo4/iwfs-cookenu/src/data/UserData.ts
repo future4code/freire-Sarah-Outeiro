@@ -24,12 +24,16 @@ class UserData extends BaseDataBase {
             )
     }
 
-    async getUserById(id: string): Promise<UserDB> {
+    async getUserById(id: string): Promise<UserDB | undefined> {
 
         const result = await this.getConnection()
             .select("*")
             .from(UserData.tableName)
             .where({ id })
+
+        if(!result.length) {
+            return undefined
+        }
 
         const user: UserDB = {
             id: result[0].id,

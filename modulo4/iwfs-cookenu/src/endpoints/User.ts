@@ -95,6 +95,31 @@ class UserEndpoint {
             res.status(error.statusCode || 500).send({message: error.message})
         }
     }
+
+    async getAnotherProfile(req: Request, res: Response) {
+        try {
+            const token = req.headers.authorization
+            const idAnotherPerson = req.params.id
+
+            if (!token) {
+                throw new Error('O token deve ser passado')
+            }
+
+            new Authenticator().getTokenData(token)
+
+            const userData = new UserData()
+            const searchPerson = await  userData.getUserById(idAnotherPerson)
+            
+            if(!searchPerson) {
+                throw new Error('Usuário não encontrado')
+            }
+
+            res.status(200).send(searchPerson)
+
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({message: error.message})
+        }
+    }
 }
 
 export default UserEndpoint
