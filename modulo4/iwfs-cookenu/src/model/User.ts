@@ -23,4 +23,10 @@ class User{
     }
 }
 
+export interface UserDB{
+    id: string,
+    nome: string,
+    email: string
+}
+
 export default User

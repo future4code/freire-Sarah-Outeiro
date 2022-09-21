@@ -74,6 +74,27 @@ class UserEndpoint {
             res.status(error.statusCode || 500).send({message: error.message})
         }
     }
+
+    async getProfile(req: Request, res: Response) {
+        try {
+            const token = req.headers.authorization
+
+            if (!token) {
+                throw new Error('O token deve ser passado')
+            }
+
+            const id = new Authenticator().getTokenData(token)
+
+            const userData = new UserData()
+
+            const user = await userData.getUserById(id)
+
+            res.status(200).send(user)
+
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({message: error.message})
+        }
+    }
 }
 
 export default UserEndpoint
