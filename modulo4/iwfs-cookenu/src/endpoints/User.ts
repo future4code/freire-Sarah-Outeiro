@@ -43,6 +43,37 @@ class UserEndpoint {
             res.status(error.statusCode || 500).send({message: error.message})
         }
     }
+
+    async login(req: Request, res: Response) {
+        try {
+
+            const {email, senha} = req.body
+
+            if (!email || !senha) {
+                throw new MissingFields()
+            }
+
+            const userData = new UserData()
+
+            const userDB = await userData.getUserByEmail(email)
+
+            if(!userDB) {
+                throw new Error('Email não cadastrado na aplicação')
+            }
+
+            const correctPassword = await new HashManager().compare(senha, userDB.getSenha())
+
+            if(!correctPassword) {
+                throw new Error("A senha está incorreta")
+            }
+
+            const token = new Authenticator().generateToken(userDB.getId())
+            
+            res.status(200).send({message: 'Usuário logado com sucesso', token})
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({message: error.message})
+        }
+    }
 }
 
 export default UserEndpoint
