@@ -1,5 +1,5 @@
 import BackCard from '../../components/BackCard/BackCard'
-import { goToCardDetail, goToHomePage } from '../../routes/coordinator'
+import { goToCardDetail, goToCards, goToHomePage } from '../../routes/coordinator'
 import { useNavigate } from 'react-router-dom'
 import useGetCards from '../../hooks/useGetCards'
 
@@ -18,6 +18,7 @@ const Cards = () => {
     return(
         <>
             <button onClick={() => goToHomePage(navigate)}>HomePage</button>
+            <button onClick={() => goToCards(navigate)}>Recomeçar</button>
             Cartas Embaralhadas e Descrição
             {cardsList}
         </>
