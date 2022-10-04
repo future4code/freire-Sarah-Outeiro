@@ -6,6 +6,6 @@ export const goToCards = (navigate) => {
     navigate('/cards')
 }
 
-export const goToCardDetail = (navigate, id) => {
-    navigate(`/carrddetail/${id}`)
+export const goToCardDetail = (navigate, card) => {
+    navigate(`/cards/detail`, {state: card})
 }
