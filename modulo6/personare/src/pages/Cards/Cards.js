@@ -2,7 +2,9 @@ import BackCard from '../../components/BackCard/BackCard'
 import { goToCardDetail, goToCards, goToHomePage } from '../../routes/coordinator'
 import { useNavigate } from 'react-router-dom'
 import useGetCards from '../../hooks/useGetCards'
-import {  CartasDiv, Introducao, Mesa, Cartas } from './styled'
+import {  CartasDiv, Titulo, Title, Mesa, Cartas } from './styled'
+import CardsTitle from '../../assets/cardstitle.png'
+import Botao from '../../components/Botao/Botao'
 
 const Cards = () => {
     const { cards } = useGetCards()
@@ -17,10 +19,12 @@ const Cards = () => {
 
     return(
         <>
-            <button onClick={() => goToHomePage(navigate)}>HomePage</button>
-            <button onClick={() => goToCards(navigate)}>Recomeçar</button>
             <CartasDiv>
-                    <Introducao>Cartas Embaralhadas e Descrição</Introducao>
+                <Titulo>
+                    <Botao text='HomePage' onClick={() => goToHomePage(navigate)}/>
+                    <Title src={CardsTitle} alt='Concentre-se e clique na carta que escolher'/>
+                    <Botao text='Recomeçar' onClick={() => goToCards(navigate)}/>
+                </Titulo>
                 <Mesa>
                     <Cartas>
                         {cardsList}

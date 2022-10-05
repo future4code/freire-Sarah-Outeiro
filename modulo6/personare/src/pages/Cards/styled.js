@@ -5,12 +5,21 @@ export const CartasDiv = styled.div`
     text-align: center;
 `
 
-export const Introducao = styled.p`
-    margin-bottom: 20px;
+export const Titulo = styled.div`
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+`
+
+export const Title = styled.img`
+    width: 600px;
 `
 
 export const Mesa = styled.div`
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
     height: auto;
     max-width: 1000px;

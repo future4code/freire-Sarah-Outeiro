@@ -1,7 +1,8 @@
 import { goToCards } from '../../routes/coordinator'
 import { useNavigate } from 'react-router-dom'
-import { HomePageDiv, BotaoStart } from './styled'
+import { HomePageDiv } from './styled'
 import TitleImage from '../../assets/titleimage.png'
+import Botao from '../../components/Botao/Botao'
 
 const HomePage = () => {
     const navigate = useNavigate()
@@ -11,9 +12,7 @@ const HomePage = () => {
             <HomePageDiv>
                 <img src={TitleImage} alt='Retrô Tarot'/>
                 <p>Tire uma carta agora e veja como você pode aproveitar o melhor do seu dia!</p>
-                <BotaoStart onClick={() => goToCards(navigate)}>
-                    Tirar Carta
-                </BotaoStart>
+                <Botao text='Tirar Carta' onClick={() => goToCards(navigate)}/>
             </HomePageDiv>
         </>
     )

@@ -1,6 +1,8 @@
 import FrontCard from "../../components/FrontCard/FrontCard"
 import { useLocation, useNavigate } from 'react-router-dom'
 import { goToCards, goToHomePage } from "../../routes/coordinator"
+import { Container, ImageDiv, TextDiv, BotaoDiv } from './styled'
+import Botao from '../../components/Botao/Botao'
 
 
 const CardDetail = () => {
@@ -8,17 +10,22 @@ const CardDetail = () => {
 
     const navigate = useNavigate()
 
-    const { name, image } = location.state
+    const { name, image, description } = location.state
 
     return(
-        <>
-            <div>
-                <FrontCard image={image}/>
+        <>  <BotaoDiv>
+                <Botao text='HomePage' onClick={() => goToHomePage(navigate)}/>
+                <Botao text='Recomeçar' onClick={() => goToCards(navigate)}/>
+            </BotaoDiv>
+            <Container>
+                <ImageDiv>
+                    <FrontCard image={image}/>
+                </ImageDiv>
+                <TextDiv>
                 <p>{name}</p>
-                <p>Lorem Ipsum</p>
-                <button onClick={() => goToCards(navigate)}>Recomeçar</button>
-                <button onClick={() => goToHomePage(navigate)}>HomePage</button>
-            </div>
+                <p>{description}</p>
+                </TextDiv>
+            </Container>
         </>
     )
 }
