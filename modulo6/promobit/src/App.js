@@ -1,6 +1,6 @@
 import Header from './components/Header/Header'
-import Router from './routes/Router'
 import { GlobalStyle } from './styled'
+import Router from './routes/Router'
 
 const App = () => {
   return (

@@ -6,4 +6,12 @@ export const MovieContainer = styled.div`
     grid-column-gap: 32px;
     grid-row-gap: 48px;
     padding: 29px 112px;
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 29px 16px;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr 1fr;
+        padding: 29px 16px;
+    }
 `
