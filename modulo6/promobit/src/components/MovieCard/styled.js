@@ -1,7 +1,11 @@
 import styled from "styled-components"
 
 export const MovieContainer = styled.div`
-
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover{
+        opacity: 70%;
+    }
 `
 export const MoviePoster = styled.img`
     margin: 0;

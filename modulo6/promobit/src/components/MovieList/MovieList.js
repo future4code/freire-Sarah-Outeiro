@@ -1,32 +1,22 @@
-import MovieCard from '../MovieCard/MovieCard'
 import { MovieContainer } from './styled'
-import useRequestData from '../../hooks/useRequestData'
-import { API_KEY, BASE_URL } from '../../constants/urls'
+import usePopularMovies from '../../hooks/usePopularMovies'
+import MovieCard from '../../components/MovieCard/MovieCard'
 
 const MovieList = () => {
-    const popularMovies = useRequestData([], `${BASE_URL}/movie/popular?${API_KEY}`)
-    console.log(popularMovies.results)
+    const movies = usePopularMovies()
+    console.log(movies)
 
+    const moviesList = movies.map((movie) => {
+        return(
+            <MovieCard 
+                key={movie.id} 
+                movie={movie}
+            />
+        )
+    })
     return(
         <MovieContainer>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
-            <MovieCard/>
+            {moviesList}
         </MovieContainer>
     )
 }
